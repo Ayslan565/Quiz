@@ -83,10 +83,10 @@ body {
 .resposta:hover {
   background-color: #0077ff; 
   color: white;
-  transform: translateX(10px); /* Move levemente para o lado, como um dash ninja */
-  box-shadow: 0 0 20px rgba(0, 150, 255, 0.7); /* Brilho de chakra azul */
-  border-left: 10px solid #00aaff; /* Uma "lâmina" de cor na lateral */
+  transform: translateX(10px); 
+  box-shadow: 0 0 20px rgba(0, 150, 255, 0.7); 
+  border-left: 10px solid #00aaff; 
 }
 .resposta:active {
-  transform: scale(0.98);    /* Efeito de clique (o botão afunda) */
+  transform: scale(0.98);
 }
