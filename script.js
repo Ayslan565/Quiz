@@ -71,3 +71,31 @@ const formulario =() => {
     }
 };
 
+var pergunta = document.getElementById('pergunta')
+var resposta = document.getElementsByClassName('resposta')
+var resposta1 = document.getElementById('resposta1')
+var resposta2 = document.getElementById('resposta2') 
+var resposta3 = document.getElementById('resposta3')
+var proximo = document.getElementById('proximo')
+var anterior = document.getElementById('anterior')
+var respostaBotao = document.getElementById('respostaBotao');
+
+
+let questaoUsuario = 0;
+let pontos_naruto = 0;
+let pontos_sasuke = 0;
+let pontos_sakura = 0;
+
+
+const Iniciar = ()=>{
+    proximo.innerHTML = 'Próximo'
+    mostrarPergunta()
+}
+
+const resetar = () => {
+    proximo.style.display = 'none';
+    anterior.style.display = 'none';
+    while (respostaBotao.firstChild) {
+        respostaBotao.removeChild(respostaBotao.firstChild);
+    }
+}
