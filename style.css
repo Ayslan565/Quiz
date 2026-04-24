@@ -45,9 +45,8 @@ body {
 
   margin: 0; 
 }
-
 .pergunta { 
-  margin-top: 180px; 
+  margin-top: 20px; /* Reduzimos de 180px para 20px */
   margin-bottom: 30px;
   font-size: 26px;
   font-weight: 800;
@@ -63,7 +62,7 @@ body {
   border-radius: 10px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
   width: 90%; 
-}
+}   
 
 .resposta {
   width: 60%;
