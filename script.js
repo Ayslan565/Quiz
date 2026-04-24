@@ -99,3 +99,37 @@ const resetar = () => {
         respostaBotao.removeChild(respostaBotao.firstChild);
     }
 }
+
+const mostrarPergunta = ()=>{
+    resetar()
+    let perguntaAtual = formulario[questaoUsuario]
+    let numQuestao = questaoUsuario +1
+
+    pergunta.innerHTML = numQuestao + ". " + perguntaAtual.pergunta
+
+    perguntaAtual.resposta.forEach((respostaAtual) => {
+
+        const botoesTratados= document.createElement('button')
+        botoesTratados.innerHTML = respostaAtual.texto
+        botoesTratados.classList.add("resposta")
+        botoesTratados.dataset.naruto = respostaAtual.naruto_pontos;
+        botoesTratados.dataset.sasuke = respostaAtual.sasuke_pontos;
+        botoesTratados.dataset.sakura = respostaAtual.sakura_pontos;
+        botoesTratados.addEventListener('click', selectResposta);
+
+        respostaBotao.appendChild(botoesTratados)
+})}
+
+
+const selectResposta= (event)=>{
+    const botaoClicado = event.target
+    pontos_naruto += parseInt(botaoClicado.dataset.naruto);
+    pontos_sasuke += parseInt(botaoClicado.dataset.sasuke);
+    pontos_sakura += parseInt(botaoClicado.dataset.sakura);
+    questaoUsuario++;
+    if (questaoUsuario < formulario.length) {
+        mostrarPergunta();
+    } else {
+        exibirResultado(); 
+    }
+}
