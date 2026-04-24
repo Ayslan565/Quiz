@@ -90,3 +90,160 @@ body {
 .resposta:active {
   transform: scale(0.98);
 }
+
+.navegacao {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: auto;
+  padding-bottom: 20px;
+}
+
+.botoes {
+  padding: 10px 25px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+#anterior {
+  background-color: transparent;
+  color: #3d2b1f;
+  border: 2px solid #3d2b1f;
+}
+
+#proximo {
+  background-color: #ff6a00;
+  color: white;
+  border: 2px solid #ff6a00;
+  box-shadow: 0 4px 0 #b34a00;
+}
+#proximo:hover {
+  background-color: #ff8533;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #b34a00;
+}
+
+#proximo:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #b34a00;
+}#anterior:hover {
+  background-color: #3d2b1f;
+  color: #fffaf0;
+  transform: translateX(-5px);
+}
+#respostaBotao {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  width: 100%;            
+  gap: 10px;              
+}
+
+.resposta {
+  width: 80%;             
+  max-width: 500px;       
+  text-align: center;     
+}
+
+.tela-resultado {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.img-vencedor {
+    width: 250px; /* Ajuste conforme o tamanho da sua arte */
+    height: auto;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 15px rgba(255, 106, 0, 0.5));
+}
+
+.info-vencedor {
+    max-width: 50%;
+    text-align: left;
+}
+
+.info-vencedor h2 {
+    font-family: 'Arial', sans-serif;
+    color: #3d2b1f;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}#tela-inicial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Estilo para a logo principal caso use na tela inicial */
+#tela-inicial img {
+  width: 220px; 
+  margin-bottom: 20px;
+  filter: drop-shadow(0 5px 15px rgba(255, 106, 0, 0.4));
+}
+
+#tela-inicial h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ff6a00; /* Laranja da sua paleta */
+  font-size: 38px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#tela-inicial p {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: #3d2b1f; /* Marrom escuro da sua paleta */
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  width: 85%;
+  background-color: #fffaf0; 
+  padding: 20px 30px;
+  border-radius: 10px;
+  border-left: 8px solid #ff6a00; /* Combinando com o estilo da pergunta */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão de Iniciar com as animações 3D da sua paleta */
+#btn-iniciar {
+  background-color: #ff6a00;
+  color: white;
+  font-size: 22px;
+  padding: 15px 50px;
+  border: 2px solid #ff6a00;
+  box-shadow: 0 6px 0 #b34a00;
+  border-radius: 8px;
+}
+
+#btn-iniciar:hover {
+  background-color: #ff8533;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 0 #b34a00;
+}
+
+#btn-iniciar:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #b34a00;
+}
